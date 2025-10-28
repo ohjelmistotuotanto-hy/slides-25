@@ -1,36 +1,3 @@
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 1
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27.10.2025
-
-# Ohjelmiston elinkaari (software lifecycle)
-
-Riippumatta tyylistä ja tavasta, jolla ohjelmisto tehdään, käy ohjelmisto läpi seuraavat _vaiheet_
-
-- Vaatimusten analysointi ja määrittely
-- Suunnittelu
-- Toteutus
-- Testaus
-- Ohjelmiston ylläpito ja evoluutio
-
-Vaiheista muodostuu ohjelmiston "elinkaari"
-
-# Vesiputousmalli
-
-Winston W. Royce: Management of the development of Large Software, 1970
-
-![](https://raw.githubusercontent.com/mluukkai/ohjelmistotekniikka-kevat2019/master/web/images/l-1.png){ width=440 }
-
-# Roycen kahden iteraation malli
-
-![](../ohjelmistotuotanto-hy.github.io/images/1-3.png){ width=400 }
-
-# Iteratiivinen ohjelmistokehitys
-
-![](../ohjelmistotuotanto-hy.github.io/images/1-4.png){ width=400 }
-
-
-#
-
 #
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 2
@@ -366,3 +333,37 @@ class Varasto
 
 - sovellus koostataan useista (jopa sadoista) pienistä verkossa toimivista autonomisista palveluista 
 
+#
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 1
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27.10.2025
+
+# Ohjelmiston elinkaari (software lifecycle)
+
+Riippumatta tyylistä ja tavasta, jolla ohjelmisto tehdään, käy ohjelmisto läpi seuraavat _vaiheet_
+
+- Vaatimusten analysointi ja määrittely
+- Suunnittelu
+- Toteutus
+- Testaus
+- Ohjelmiston ylläpito ja evoluutio
+
+Vaiheista muodostuu ohjelmiston "elinkaari"
+
+# Vesiputousmalli
+
+Winston W. Royce: Management of the development of Large Software, 1970
+
+![](https://raw.githubusercontent.com/mluukkai/ohjelmistotekniikka-kevat2019/master/web/images/l-1.png){ width=440 }
+
+# Roycen kahden iteraation malli
+
+![](../ohjelmistotuotanto-hy.github.io/images/1-3.png){ width=400 }
+
+# Iteratiivinen ohjelmistokehitys
+
+![](../ohjelmistotuotanto-hy.github.io/images/1-4.png){ width=400 }
+
+
+#
