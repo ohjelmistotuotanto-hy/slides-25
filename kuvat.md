@@ -1,41 +1,101 @@
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 4
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.11.2025
+#
 
-# Hyvä product backlog on DEEP
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 5
 
-- Detailed appropriatly
-- Estimated
-- Emergent
-- Prioritized
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.11.2025
 
-![](../ohjelmistotuotanto-hy.github.io/images/2-9.png){ width=350 }
+# Testauksen tasot
 
-# Sprint backlog
+- _Yksikkötestaus_ (unit testing)
+  - Yksittäisten luokkien, metodien ja moduulien testaus erillään muusta kokonaisuudesta
 
-![](./images/taskboard1.png){ width=400 }
+- _Integraatiotestaus_ (integration testing)
+  - Yksittäin testattujen komponenttien liittäminen yhteen eli integrointi ja kokonaisuuden testaus
 
-# WIP-rajoitteet
+- _Järjestelmätestaus_ (system testing)
+  - Toimiiko ohjelmisto vaatimuksiin kirjatulla tavalla?
+  - Tutkii järjestelmää kokonaisuudessaan: _end to end -testaus_
+  - Jakautuu useisiin alalajeihin
 
-![](./images/wip1.png){ width=400 }
+- _Käyttäjän hyväksymistestaus_ (user acceptance testing)
+  - Loppukäyttäjän tuotteelle suorittama testaus
 
-# WIP-rajoitteet
+# "V-malli"
 
-![](./images/wip2.png){ width=400 }
+![](../ohjelmistotuotanto-hy.github.io/images/3-3.png){ width=400 }
+
+
+# Testisyötteiden valinta: palautussovellus
+
+- Mitä testitapauksia kannattaisi valita palautussovelluksen testaamiseen?
+
+![](./images/submsystem.png){ width=350 }
+
+# Ohtuvarasto: tyhjä, puolitäysi, täysi
+
+```python
+class Varasto
+    def __init__(self, tilavuus, alku_saldo = 0):
+        self.tilavuus = tilavuus
+        self.saldo = alkusalto
+
+    def ota_varastosta(self, maara):
+        if maara < 0:
+            return 0.0
+
+        if maara > self.saldo:
+            kaikki_mita_voidaan = self.saldo
+            self.saldo = 0.0
+            return kaikki_mita_voidaan
+
+        self.saldo = self.saldo - maara
+        return maara
+```
+
+#
+
+- Rakenteeseen perustuva integraatio
+
+![](./images/3.png){ width=100 }
+
+- Ominaisuuksiin perustuva integraatio
+
+![](./images/3b.png){ width=100 }
 
 
 #
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 6
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28.10.2025
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.11.2025
 
-# Scrum kuvana
+# Test driven development (TDD)
 
-![](../ohjelmistotuotanto-hy.github.io/images/2-1.png){ width=440 }
+![](../ohjelmistotuotanto-hy.github.io/images/lu3-4.png){ width=340 }
 
-#
+1. Kirjoitetaan sen verran testiä että testi ei mene läpi
+2. Kirjoitetaan koodia sen verran, että testi menee läpi
+3. Jos huomataan koodin rakenteen menneen huonoksi refaktoroidaan koodin rakenne paremmaksi
+4. Jatketaan askeleesta 1
+
+# Testit asiakkan kielellä
+
+![](images/robot1.png){ width=400 }
+
+# Deployment pipeline
+
+- Vaiheet, joiden suorittaminen edellytetään, että commitattu koodi saadaan siirrettyä staging/tuotantoympäristöön
+
+![](../ohjelmistotuotanto-hy.github.io/images/3-12.png){ width=400 }
+
+# Canary release
+
+- Kaksi rinnakkaista tuotantoympäristöä, joista uudet ominaisuudet viedään toiseen
+
+![](./images/canary.png){ width=400 }
+
 
 #
 
@@ -146,103 +206,6 @@
 
 
 
-#
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 6
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.11.2025
-
-# Test driven development (TDD)
-
-![](../ohjelmistotuotanto-hy.github.io/images/lu3-4.png){ width=340 }
-
-1. Kirjoitetaan sen verran testiä että testi ei mene läpi
-2. Kirjoitetaan koodia sen verran, että testi menee läpi
-3. Jos huomataan koodin rakenteen menneen huonoksi refaktoroidaan koodin rakenne paremmaksi
-4. Jatketaan askeleesta 1
-
-# Testit asiakkan kielellä
-
-![](images/robot1.png){ width=400 }
-
-# Deployment pipeline
-
-- Vaiheet, joiden suorittaminen edellytetään, että commitattu koodi saadaan siirrettyä staging/tuotantoympäristöön
-
-![](../ohjelmistotuotanto-hy.github.io/images/3-12.png){ width=400 }
-
-# Canary release
-
-- Kaksi rinnakkaista tuotantoympäristöä, joista uudet ominaisuudet viedään toiseen
-
-![](./images/canary.png){ width=400 }
-
-
-#
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 5
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11.11.2025
-
-# Testauksen tasot
-
-- _Yksikkötestaus_ (unit testing)
-  - Yksittäisten luokkien, metodien ja moduulien testaus erillään muusta kokonaisuudesta
-
-- _Integraatiotestaus_ (integration testing)
-  - Yksittäin testattujen komponenttien liittäminen yhteen eli integrointi ja kokonaisuuden testaus
-
-- _Järjestelmätestaus_ (system testing)
-  - Toimiiko ohjelmisto vaatimuksiin kirjatulla tavalla?
-  - Tutkii järjestelmää kokonaisuudessaan: _end to end -testaus_
-  - Jakautuu useisiin alalajeihin
-
-- _Käyttäjän hyväksymistestaus_ (user acceptance testing)
-  - Loppukäyttäjän tuotteelle suorittama testaus
-
-# Testisyötteiden valinta: palautussovellus
-
-- Mitä testitapauksia kannattaisi valita palautussovelluksen testaamiseen?
-
-![](./images/submsystem.png){ width=350 }
-
-# Ohtuvarasto: tyhjä, puolitäysi, täysi
-
-```python
-class Varasto
-    def __init__(self, tilavuus, alku_saldo = 0):
-        self.tilavuus = tilavuus
-        self.saldo = alkusalto
-
-    def ota_varastosta(self, maara):
-        if maara < 0:
-            return 0.0
-
-        if maara > self.saldo:
-            kaikki_mita_voidaan = self.saldo
-            self.saldo = 0.0
-            return kaikki_mita_voidaan
-
-        self.saldo = self.saldo - maara
-        return maara
-```
-
-#
-
-- Rakenteeseen perustuva integraatio
-
-![](./images/3.png){ width=100 }
-
-- Ominaisuuksiin perustuva integraatio
-
-![](./images/3b.png){ width=100 }
-
-# "V-malli"
-
-![](../ohjelmistotuotanto-hy.github.io/images/3-3.png){ width=400 }
-
-
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 10
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28.11.2023
@@ -329,6 +292,16 @@ Winston W. Royce: Management of the development of Large Software, 1970
 
 #
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 2
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28.10.2025
+
+# Scrum kuvana
+
+![](../ohjelmistotuotanto-hy.github.io/images/2-1.png){ width=440 }
+
+#
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 3
 
 # Ohjelmiston elinkaari (software lifecycle)
@@ -364,3 +337,32 @@ Winston W. Royce: Management of the development of Large Software, 1970
   - Testable
 
 #
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Luento 4
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.11.2025
+
+# Hyvä product backlog on DEEP
+
+- Detailed appropriatly
+- Estimated
+- Emergent
+- Prioritized
+
+![](../ohjelmistotuotanto-hy.github.io/images/2-9.png){ width=350 }
+
+# Sprint backlog
+
+![](./images/taskboard1.png){ width=400 }
+
+# WIP-rajoitteet
+
+![](./images/wip1.png){ width=400 }
+
+# WIP-rajoitteet
+
+![](./images/wip2.png){ width=400 }
+
+
+#
+
