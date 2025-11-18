@@ -5,12 +5,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18.11.2025
 
-# Mikropalveluarkkitehtuuri
-
-![](../ohjelmistotuotanto-hy.github.io/images/lu8-1.png){ width=250 }
-
-- sovellus koostataan useista (jopa sadoista) pienistä verkossa toimivista autonomisista palveluista 
-
 # Laadukkaan koodin tuntomerkkejä
 
 - Laadukkaalla koodilla joukko yhteneviä ominaisuuksia, tai _laatuattribuutteja_, esim. seuraavat:
