@@ -29,7 +29,15 @@
   - testattavuus
   - selkeys
 
-  #
+# Vibe-koodaus
+
+. . . 
+
+- teknisen velan määrän kasvu
+
+. . .
+
+- oppimisvelka
 
 #
 
